@@ -18,5 +18,5 @@ app.listen(PORT,()=>{
 })
 )
 .catch((err)=>{
-    console.log("Mongod connection error")
+    console.log("MongodB connection error")
 })
