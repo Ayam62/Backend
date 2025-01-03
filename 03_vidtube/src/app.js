@@ -16,12 +16,12 @@ app.use(express.urlencoded({extended:true,limit:"16kb"}))//to understand form da
 app.use(express.static("public"));//serves static files like images,css JS etc//all files inside oublic can be accessed by backend
 
 //import routes
-import router from "./routes/healthcheck.routes";
-import { healthcheck } from "./controllers/healthCheck.controller";
+import healthcheckRouter from "./routes/healthcheck.routes.js";
+//import { healthcheck } from "./controllers/healthCheck.controller";
 
 //routes 
 
-app.use("/api/v1/healthcheck",router)
+app.use("/api/v1/healthcheck",healthcheckRouter)
 
 export {app};
 
